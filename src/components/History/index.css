@@ -1,0 +1,9 @@
+.logos-container {
+  background-color: #3367d6;
+  background-size: cover;
+}
+.app-logo,
+.search-logo {
+  height: 40px;
+  width: 40px;
+}
