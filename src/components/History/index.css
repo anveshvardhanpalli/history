@@ -1,9 +1,26 @@
 .logos-container {
   background-color: #3367d6;
   background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100px;
 }
 .app-logo,
 .search-logo {
+  height: 50px;
+  width: 50px;
+}
+.input-con {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.empty {
+  text-align: center;
+}
+input {
   height: 40px;
-  width: 40px;
 }

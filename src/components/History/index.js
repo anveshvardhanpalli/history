@@ -30,9 +30,9 @@ class History extends Component {
           <img
             src="https://assets.ccbp.in/frontend/react-js/history-website-logo-img.png"
             alt="app logo"
-            className="appl-logo"
+            className="app-logo"
           />
-          <div>
+          <div className="input-con">
             <img
               src="https://assets.ccbp.in/frontend/react-js/search-img.png"
               alt="search"
@@ -46,14 +46,20 @@ class History extends Component {
           </div>
         </div>
         <div>
-          <ul>
-            {filterHistory.map(item => (
-              <HistoryItem
-                historyData={item}
-                onDelete={() => this.onDelete(item.id)}
-              />
-            ))}
-          </ul>
+          {filterHistory.length > 0 ? (
+            <ul>
+              {filterHistory.map(item => (
+                <HistoryItem
+                  historyData={item}
+                  onDelete={() => this.onDelete(item.id)}
+                />
+              ))}
+            </ul>
+          ) : (
+            <ul>
+              <p className="empty">There is no history to show</p>
+            </ul>
+          )}
         </div>
       </div>
     )
